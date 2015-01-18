@@ -1,0 +1,44 @@
+{
+  "name": "mongo-uuid-helper",
+  "version": "0.0.1",
+  "description": "NodeJS UUID helper based on official",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "scripts": {
+    "lint": "jshint .",
+    "checkStyle": "jscs .",
+    "pretest": "npm run-script lint && npm run-script checkStyle",
+    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
+    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
+    "prepublish": "npm test && npm prune"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:confuser/node-mongo-uuid-helper.git"
+  },
+  "keywords": [
+    "mongo",
+    "mongodb",
+    "uuid",
+    "helper"
+  ],
+  "author": "James Mortemore <jamesmortemore@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/confuser/node-mongo-uuid-helper/issues"
+  },
+  "dependencies": {
+    "mongodb": "^1.4.28"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.2",
+    "istanbul": "0",
+    "jscs": "1",
+    "jshint": "2",
+    "jshint-full-path": "0",
+    "mocha": "2",
+    "should": "2"
+  }
+}
