@@ -1,7 +1,7 @@
 {
   "name": "mongo-uuid-helper",
   "version": "0.0.1",
-  "description": "NodeJS UUID helper based on official",
+  "description": "NodeJS UUID helper based on official C# driver",
   "main": "index.js",
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
