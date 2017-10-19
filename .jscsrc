@@ -11,7 +11,7 @@
 , "requireCapitalizedConstructors": true
 , "requireSpacesInsideObjectBrackets": "all"
 , "requireSpacesInsideArrayBrackets": "all"
-, "validateLineBreaks": "CRLF"
+, "validateLineBreaks": "LF"
 , "requireSpaceBeforeBinaryOperators": [ "+", "-", "/", "*", "=", "==", "===", "!=", "!==" ]
 , "requireSpaceAfterBinaryOperators": [ "+", "-", "/", "*", "=", "==", "===", "!=", "!==" ]
 , "requireSpaceAfterKeywords": [ "if", "else", "for", "while", "do", "switch", "try", "catch" ]
