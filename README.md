@@ -16,7 +16,9 @@ npm install mongo-uuid-helper --save
 
 ## Usage
 ```js
-var uuidHelper = require('mongo-uuid-helper')
-  , binData = uuidHelper.juuidStringToBin('ae51c849-3f2a-4a37-986d-55ed5b02307f')
-  , jUUID = uuidHelper.binToJUUIDString(binData)
+var uuidHelper = require('mongo-uuid-helper'),
+    juuidBin = uuidHelper.juuidStringToBin('ae51c849-3f2a-4a37-986d-55ed5b02307f'),
+    csuuidBin = csuuidHelper.csuuidStringToBin('0c552563-77d2-4562-a9bd-739ba2c6e1fe'),
+    jUUID = uuidHelper.binToJUUIDString(juuidBin),
+    csUUID = uuidHelper.binToCSUUIDString(csuuidBin)
 ```
