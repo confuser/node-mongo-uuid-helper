@@ -9,6 +9,7 @@
 , "disallowSpaceAfterObjectKeys": true
 , "disallowTrailingWhitespace": true
 , "requireCapitalizedConstructors": true
+, "disallowCommaBeforeLineBreak": true
 , "requireSpacesInsideObjectBrackets": "all"
 , "requireSpacesInsideArrayBrackets": "all"
 , "validateLineBreaks": "LF"
