@@ -1,15 +1,14 @@
 {
   "name": "mongo-uuid-helper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "NodeJS UUID helper based on official C# driver",
   "main": "index.js",
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
   },
   "scripts": {
-    "lint": "jshint .",
-    "checkStyle": "jscs .",
-    "pretest": "npm run-script lint && npm run-script checkStyle",
+    "lint": "./node_modules/.bin/eslint .",
+    "pretest": "npm run lint",
     "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
     "prepublish": "npm test && npm prune"
@@ -30,14 +29,14 @@
     "url": "https://github.com/confuser/node-mongo-uuid-helper/issues"
   },
   "dependencies": {
-    "mongodb": "^1.4.28"
+    "mongodb": "^3.0.8"
   },
   "devDependencies": {
     "coveralls": "^2.11.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
     "istanbul": "0",
-    "jscs": "1",
-    "jshint": "2",
-    "jshint-full-path": "0",
     "mocha": "2",
     "should": "2"
   }
