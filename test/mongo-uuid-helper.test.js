@@ -10,4 +10,13 @@ describe('Mongo UUID Helper', function () {
       assert.strictEqual(uuidHelper.binToJUUIDString(binary), juuidStr)
     })
   })
+
+  describe('#binToCSUUIDString', function () {
+    it('should convert binary to a csuuid string', function () {
+      const csuuidStr = '0c552563-77d2-4562-a9bd-739ba2c6e1fe'
+      const binary = uuidHelper.csuuidStringToBin(csuuidStr)
+
+      assert.strictEqual(uuidHelper.binToCSUUIDString(binary), csuuidStr)
+    })
+  })
 })

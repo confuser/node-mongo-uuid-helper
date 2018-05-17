@@ -11,12 +11,15 @@ Currently only implements JUUID, PR's welcome.
 ## Installation
 
 ```
-npm install mongo-uuid-helper --save
+npm install mongo-uuid-helper
 ```
 
 ## Usage
 ```js
-var uuidHelper = require('mongo-uuid-helper')
-  , binData = uuidHelper.juuidStringToBin('ae51c849-3f2a-4a37-986d-55ed5b02307f')
-  , jUUID = uuidHelper.binToJUUIDString(binData)
+const uuidHelper = require('mongo-uuid-helper')
+
+const juuidBin = uuidHelper.juuidStringToBin('ae51c849-3f2a-4a37-986d-55ed5b02307f')
+const csuuidBin = csuuidHelper.csuuidStringToBin('0c552563-77d2-4562-a9bd-739ba2c6e1fe')
+const jUUID = uuidHelper.binToJUUIDString(juuidBin)
+const csUUID = uuidHelper.binToCSUUIDString(csuuidBin)
 ```
