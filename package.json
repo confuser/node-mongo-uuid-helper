@@ -3,16 +3,9 @@
   "version": "0.0.2",
   "description": "NodeJS UUID helper based on official C# driver",
   "main": "index.js",
-  "publishConfig": {
-    "registry": "http://registry.npmjs.org"
-  },
   "scripts": {
-    "lint": "jshint .",
-    "checkStyle": "jscs .",
-    "pretest": "npm run-script lint && npm run-script checkStyle",
-    "test": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
-    "posttest": "./node_modules/.bin/istanbul check-coverage && rm -rf coverage",
-    "prepublish": "npm test && npm prune"
+    "test": "standard && nyc --reporter=html --reporter=text mocha test/**/*.test.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -29,16 +22,23 @@
   "bugs": {
     "url": "https://github.com/confuser/node-mongo-uuid-helper/issues"
   },
+  "engines": {
+    "node": ">=6.0.0"
+  },
   "dependencies": {
-    "mongodb": "^1.4.28"
+    "mongodb": "^3.0.8"
   },
   "devDependencies": {
-    "coveralls": "^2.11.2",
-    "istanbul": "0",
-    "jscs": "1",
-    "jshint": "2",
-    "jshint-full-path": "0",
-    "mocha": "2",
-    "should": "2"
+    "coveralls": "^3.0.1",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.3",
+    "standard": "^11.0.1"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "before"
+    ]
   }
 }
