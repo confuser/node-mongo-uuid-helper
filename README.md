@@ -1,12 +1,12 @@
 # Mongo UUID Helper
 
-[![build status](https://secure.travis-ci.org/confuser/node-mongo-uuid-helper.png)](http://travis-ci.org/confuser/node-mongo-uuid-helper)
-[![Coverage Status](https://coveralls.io/repos/confuser/node-mongo-uuid-helper/badge.png?branch=master)](https://coveralls.io/r/confuser/node-mongo-uuid-helper?branch=master)
-
+[![Build Status](https://api.travis-ci.org/confuser/node-mongo-uuid-helper.svg?branch=master)](https://travis-ci.org/confuser/node-mongo-uuid-helper)
+[![Coverage Status](https://coveralls.io/repos/confuser/node-mongo-uuid-helper/badge.svg?branch=master)](https://coveralls.io/r/confuser/node-mongo-uuid-helper?branch=master)
+[![Known Vulnerabilities](https://snyk.io/test/github/confuser/node-mongo-uuid-helper/badge.svg?targetFile=package.json)](https://snyk.io/test/github/confuser/node-mongo-uuid-helper?targetFile=package.json)
 
 A NodeJS UUID helper, based on the [C# driver UUID helper](https://github.com/mongodb/mongo-csharp-driver/blob/master/uuidhelpers.js)
 
-Currently only implements JUUID, PR's welcome.
+Currently only implements JUUID and CSUUID, PR's welcome.
 
 ## Installation
 
