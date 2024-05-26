@@ -31,8 +31,8 @@
   "devDependencies": {
     "coveralls": "^3.0.1",
     "mocha": "^5.1.1",
-    "nyc": "^11.7.3",
-    "standard": "^11.0.1"
+    "nyc": "^15.0.0",
+    "standard": "^16.0.0"
   },
   "standard": {
     "globals": [
